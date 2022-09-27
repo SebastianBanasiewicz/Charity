@@ -1,15 +1,17 @@
 package pl.coderslab.charity.service;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.coderslab.charity.model.Donation;
 import pl.coderslab.charity.repository.DonationRepository;
 
 @Service
+@RequiredArgsConstructor
 public class DonationService {
 
     @Autowired
-    private DonationRepository donationRepository;
+    private final DonationRepository donationRepository;
 
     public Iterable<Donation> getDonations() {
         return donationRepository.findAll();

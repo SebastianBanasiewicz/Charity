@@ -24,8 +24,8 @@ public class HomeController {
     @RequestMapping("/")
     public String homeAction(Model model) {
 
-        List<Institution> list = (List<Institution>) institutionService.getInstitutions();
-        model.addAttribute("institutions", list);
+        List<Institution> institutions = (List<Institution>) institutionService.getInstitutions();
+        model.addAttribute("institutions", institutions);
         Integer totalDonationBags = donationService.totalDonationBags();
         model.addAttribute("totalDonationBags", totalDonationBags);
         Integer totalDonations = donationService.totalDonations();

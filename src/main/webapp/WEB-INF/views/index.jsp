@@ -83,7 +83,7 @@
             Możesz sprawdzić czym się zajmują.</p>
 
         <ul class="help--slides-items">
-            <li><c:forEach items="${institutions}" var="institution">
+            <li><c:forEach items="${institutions}" var="institution" varStatus="">
                 <div class="col">
                     <div class="title">${institution.name}</div>
                     <div class="subtitle">Cel i misja: ${institution.description}</div>
@@ -93,7 +93,7 @@
 <%--                    <div class="title">Fundacja "A kogo"</div>--%>
 <%--                    <div class="subtitle">Cel i misja: Pomoc wybudzaniu dzieci ze śpiączki.</div>--%>
 <%--                </div>--%>
-<%--            </li>--%>
+            </li>
 
 <%--            <li>--%>
 <%--                <div class="col">--%>
@@ -105,7 +105,7 @@
 <%--                    <div class="subtitle">Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania</div>--%>
 <%--                </div>--%>
 
-            </li>
+<%--            </li>--%>
 
         </ul>
     </div>
