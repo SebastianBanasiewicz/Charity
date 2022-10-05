@@ -13,6 +13,10 @@ public class DonationService {
     @Autowired
     private final DonationRepository donationRepository;
 
+    public void save(Donation donation) {
+        donationRepository.save(donation);
+    }
+
     public Iterable<Donation> getDonations() {
         return donationRepository.findAll();
     }
